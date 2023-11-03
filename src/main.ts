@@ -11,6 +11,7 @@ async function bootstrap() {
   app.setViewEngine('jsx');
   app.engine('jsx', engine);
 
+  // app.enableCors();
   await app.listen(3001);
 }
 bootstrap();

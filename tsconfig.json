@@ -17,5 +17,13 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "views/**/*.html",  // Add this line for HTML files
+    "views/**/*.jsx"    // Add this line for JSX files
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

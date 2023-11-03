@@ -5,9 +5,15 @@ import { AppService, AppServiceResponse } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('/')
+  @Render('layout')
+  index(@Response() res) {
+    res.locals.lang = 'en';
+  }
+
+  @Get('/users')
   @Render('users/index')
-  getHello(@Response() res): AppServiceResponse {
+  getUsers(@Response() res): AppServiceResponse {
     res.locals.lang = 'en';
     return this.appService.getHello();
   }
