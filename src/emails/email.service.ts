@@ -1,19 +1,19 @@
 import { Injectable } from '@nestjs/common';
 
-interface User {
+interface Emails {
   author: string;
   category?: string;
   description?: string;
   link?: string;
 }
 
-export interface AppServiceResponse {
-  emails: User[];
+export interface EmailServiceResponse {
+  emails: Emails[];
 }
 
 @Injectable()
-export class AppService {
-  getHello(): AppServiceResponse {
+export class EmailService {
+  getEmails(): EmailServiceResponse {
     return {
       emails: [
         {

@@ -1,3 +1,5 @@
+// I need to wrap in a component so the element is returned
+// if not I get a blank page
 <>
   {emails.map(email => (
     <div class="card" key={email}>
