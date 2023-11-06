@@ -1,5 +1,5 @@
 import { Controller, Get, Render, Inject } from '@nestjs/common';
-import { EmailOutlookResponse } from './emailsProviders/emailOutlook.service';
+import { EmailOutlookResponse } from './emailClients/outlook/emailOutlook.service';
 import { EMAIL_SERVICE, IEmailService } from './emailService.interface';
 
 @Controller('emails')
