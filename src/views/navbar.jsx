@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary mb-2" hx-boost="true" hx-target="#root">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Email gpt</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/emails">Home</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -20,7 +20,7 @@
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="#">My Account</a></li>
-          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="/user/settings">Settings</a></li>
           <li> <hr class="dropdown-divider"/></li>
           <li><a class="dropdown-item" href="#">Logout</a></li>
         </ul>
