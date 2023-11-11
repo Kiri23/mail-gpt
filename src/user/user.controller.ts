@@ -6,7 +6,5 @@ export class UserController {
 
   @Get('/settings')
   @Render('user/userSettings')
-  renderSettings() {
-    return { message: 'Hello world!' };
-  }
+  renderSettings() {}
 }
