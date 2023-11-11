@@ -1,0 +1,7 @@
+{
+    "watch": ["src/**/*.handlebars", "src/**/*.ts"],
+    "ext": "handlebars,ts",
+    "ignore": ["node_modules"],
+    "exec": "nest start --watch"
+  }
+  
