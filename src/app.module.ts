@@ -5,7 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { UserController } from './user/user.controller';
 import { UserModule } from './user/user.module';
 import validationSchema from './config/configuration.schema';
-import { LoggerMiddleware } from './logger.middleware';
+import { LoggerMiddleware } from './logger/logger.middleware';
 
 @Module({
   imports: [
