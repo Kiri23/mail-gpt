@@ -10,6 +10,8 @@
   <h3>
     Emails clients
   </h3>
+  {{! cannot use hx-get because microsft will block it by cors since they do not allow xhr request }}
+  {{!-- that is why I use alpine.js --}}
   <div x-data="{signInUrl: '/emails/auth/signin'}">
     <button @click='window.location.href = signInUrl'>
       Log in with Microsoft Outlook
