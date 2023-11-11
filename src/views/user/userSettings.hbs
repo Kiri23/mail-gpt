@@ -1,0 +1,18 @@
+<h1>
+  User setting
+</h1>
+<hr />
+<br />
+<h3>
+  Media consumers
+</h3>
+<div>
+  <h3>
+    Emails clients
+  </h3>
+  <div x-data="{signInUrl: '/emails/auth/signin'}">
+    <button @click='window.location.href = signInUrl'>
+      Log in with Microsoft Outlook
+    </button>
+  </div>
+</div>
