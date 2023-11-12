@@ -5,6 +5,9 @@ import { AppModule } from './app.module';
 import { CustomLogger } from './logger/customLogger';
 import { engine } from 'express-handlebars';
 
+import * as session from 'express-session';
+import { CustomExceptionFilter } from './exceptions/custom-exception.filter';
+
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     logger: new CustomLogger(),
