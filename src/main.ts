@@ -2,9 +2,11 @@ import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
-import { engine } from 'express-handlebars';
 import { AppModule } from './app.module';
 import { CustomLogger } from './logger/customLogger';
+import { engine } from 'express-handlebars';
+
+import * as session from 'express-session';
 import { CustomExceptionFilter } from './exceptions/custom-exception.filter';
 
 async function bootstrap() {
