@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
+import { engine } from 'express-handlebars';
 import { AppModule } from './app.module';
 import { CustomLogger } from './logger/customLogger';
 import { CustomExceptionFilter } from './exceptions/custom-exception.filter';
