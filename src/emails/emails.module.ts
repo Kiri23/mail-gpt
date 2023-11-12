@@ -3,7 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 
 import { EmailsController } from './emails.controller';
 import { EmailOutlookService } from './emailClients/outlook/emailOutlook.service';
-import { EMAIL_SERVICE } from './emailService.interface';
+import { EMAIL_SERVICE } from './interfaces/emailService.interface';
 
 import {
   Authentication,

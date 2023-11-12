@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+import { ValidationPipe } from '@nestjs/common';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 import { AppModule } from './app.module';
@@ -13,13 +14,26 @@ async function bootstrap() {
     logger: new CustomLogger(),
   });
   app.useGlobalFilters(new CustomExceptionFilter());
- 
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      transform: true,
+      disableErrorMessages: process.env.NODE_ENV === 'production',
+    }),
+  );
 
   app.useStaticAssets(join(__dirname, '..', 'public'));
   app.setBaseViewsDir(join(__dirname, '..', 'src', 'views'));
   app.setViewEngine('hbs');
   app.engine('hbs', engine({ extname: '.hbs' }));
 
+  app.use(
+    session({
+      secret: 'OxS5bkIcpCduSJrtZb6Hq6uvO5xq8V3M3LQDZFSgJos',
+      resave: false,
+      saveUninitialized: false,
+    }),
+  );
   // app.enableCors();
   await app.listen(3001);
 }

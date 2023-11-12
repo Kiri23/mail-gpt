@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { IEmailService } from '../../emailService.interface';
+import { IEmailService } from '../../interfaces/emailService.interface';
 
 interface OutlookEmails {
   author: string;

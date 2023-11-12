@@ -18,10 +18,10 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
   },
+  "files": ["type.d.ts"],
   "include": [
     "src/**/*.ts",
-    "views/**/*.html",  // Add this line for HTML files
-    "views/**/*.jsx"    // Add this line for JSX files
+    "views/**/*.html", 
   ],
   "exclude": [
     "node_modules"

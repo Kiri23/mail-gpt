@@ -6,14 +6,12 @@ import {
   Configuration,
 } from '@azure/msal-node';
 
-const msal = require('@azure/msal-node');
-
 export class Authentication {
   private client: ConfidentialClientApplication;
   private configuration: Configuration;
   constructor(configuration: Configuration) {
     this.configuration = configuration;
-    this.client = new msal.ConfidentialClientApplication(this.configuration);
+    this.client = new ConfidentialClientApplication(this.configuration);
   }
 
   async getAuthCodeUrl(
