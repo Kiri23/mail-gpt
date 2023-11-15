@@ -1,7 +1,8 @@
 import { Logger } from '@nestjs/common';
-import { Authentication } from './auth';
+import { Authentication } from '../auth';
+import { ConfigService } from '@nestjs/config';
 
-export function createAuthentication() {
+export function createAuthentication(configService: ConfigService) {
   const msalConfig = {
     auth: {
       clientId: process.env.OAUTH_CLIENT_ID || '',
@@ -20,5 +21,5 @@ export function createAuthentication() {
     },
   };
 
-  return new Authentication(msalConfig);
+  return new Authentication(msalConfig, configService);
 }

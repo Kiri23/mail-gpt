@@ -1,20 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { IEmailService } from '../../interfaces/emailService.interface';
-
-interface OutlookEmails {
-  author: string;
-  category?: string;
-  description?: string;
-  link?: string;
-}
-
-export interface EmailOutlookResponse {
-  emails: OutlookEmails[];
-}
+import { MicrosoftGraph } from './library/graph';
 
 @Injectable()
 export class EmailOutlookService implements IEmailService {
-  getEmails(): EmailOutlookResponse {
+  constructor(private readonly microsoftGraph: MicrosoftGraph) {}
+
+  async getEmails() {
+    const user = await this.microsoftGraph.getuserDetails();
+
     return {
       emails: [
         {
